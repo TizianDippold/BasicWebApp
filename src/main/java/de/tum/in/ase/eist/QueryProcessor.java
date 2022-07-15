@@ -26,7 +26,7 @@ public class QueryProcessor {
             for (int i = 9; i < split.length; i++, j++) {
                 numbers[j] = split[i];
             }
-            return Arrays.stream(numbers).map(x -> x.replaceAll(",", "")).mapToInt(Integer::parseInt).max().toString();
+            return String.valueOf(Arrays.stream(numbers).map(x -> x.replaceAll(",", "")).mapToInt(Integer::parseInt).max().getAsInt());
         } else if (query.contains("")) {
             return "";
         } else if (query.contains("")) {
