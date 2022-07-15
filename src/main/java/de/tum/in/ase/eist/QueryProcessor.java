@@ -18,14 +18,15 @@ public class QueryProcessor {
         } else if (query.contains("what is your age")) {
             return "20";
         } else if (query.contains("plus")) {
-            return String.valueOf(Integer.parseInt(query.split(" ")[2]) + Integer.parseInt(query.split(" ")[4]));
+            return String.valueOf(Integer.parseInt(query.split(" ")[3]) + Integer.parseInt(query.split(" ")[5]));
         } else if (query.contains("largest")) {
             String[] split = query.split(" ");
-            String[]numbers = new String[split.length - 8];
-            for (int i = 8; i<split.length; i++){
-                numbers[i] = split[i];
+            String[] numbers = new String[split.length - 9];
+            int j = 0;
+            for (int i = 9; i < split.length; i++, j++) {
+                numbers[j] = split[i];
             }
-            return Arrays.stream(numbers).map(x->x.replaceAll(",","")).mapToInt(Integer::parseInt).max().toString();
+            return Arrays.stream(numbers).map(x -> x.replaceAll(",", "")).mapToInt(Integer::parseInt).max().toString();
         } else if (query.contains("")) {
             return "";
         } else if (query.contains("")) {

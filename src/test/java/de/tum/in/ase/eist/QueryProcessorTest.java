@@ -30,4 +30,20 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	void testPlus(){
+		String actual = queryProcessor.process("what is 4 plus 2");
+		if (!actual.contains("6")){
+			fail();
+		}
+	}
+
+	@Test
+	void testLargest(){
+		String actual = queryProcessor.process("what is 4 plus 2");
+		if (!actual.contains("6")){
+			fail();
+		}
+	}
+
 }
