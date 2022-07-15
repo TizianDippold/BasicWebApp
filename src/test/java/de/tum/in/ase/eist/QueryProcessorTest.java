@@ -41,6 +41,7 @@ class QueryProcessorTest {
 	@Test
 	void testLargest(){
 		String actual = queryProcessor.process("a6bc5800: which of the following numbers is the largest: 296, 77, 560, 74");
+		System.out.println(actual);
 		if (!actual.contains("560")){
 			fail();
 		}
