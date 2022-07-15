@@ -32,7 +32,7 @@ class QueryProcessorTest {
 
 	@Test
 	void testPlus(){
-		String actual = queryProcessor.process("what is 4 plus 2");
+		String actual = queryProcessor.process("a: what is 4 plus 2");
 		if (!actual.contains("6")){
 			fail();
 		}
@@ -40,7 +40,7 @@ class QueryProcessorTest {
 
 	@Test
 	void testLargest(){
-		String actual = queryProcessor.process("what is 4 plus 2");
+		String actual = queryProcessor.process("b: what is 4 plus 2");
 		if (!actual.contains("6")){
 			fail();
 		}
