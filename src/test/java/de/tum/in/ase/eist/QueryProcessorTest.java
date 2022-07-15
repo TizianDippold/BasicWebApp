@@ -40,8 +40,8 @@ class QueryProcessorTest {
 
 	@Test
 	void testLargest(){
-		String actual = queryProcessor.process("b: what is 4 plus 2");
-		if (!actual.contains("6")){
+		String actual = queryProcessor.process("9eb0f8b0: which of the following numbers is the largest: 31, 970, 20, 835");
+		if (!actual.contains("970")){
 			fail();
 		}
 	}
